@@ -1,0 +1,5 @@
+replicas: 1
+
+image:
+  repository: cruelplatypus67/devops2
+  tag: latest
