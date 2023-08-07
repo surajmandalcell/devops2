@@ -3,6 +3,12 @@
     "target": "es6",
     "module": "NodeNext",
     "rootDir": ".",
-    "outDir": "dist"
-  }
+    "outDir": "."
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
