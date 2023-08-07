@@ -5,4 +5,8 @@ docker build -t devops2_pending --build-arg STATE=PENDING .
 docker build -t devops2_prod --build-arg STATE=PROD .
 ```
 
-D
+```
+cd helm
+helm install release1 devops1 --values values.PENDING.yaml
+helm install release2 devops1 --values values.PROD.yaml
+```

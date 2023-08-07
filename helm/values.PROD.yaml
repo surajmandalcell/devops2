@@ -1,0 +1,12 @@
+replicas: 1
+
+image:
+  repository: cruelplatypus67/devops2
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: LoadBalancer
+  port: 80
+
+envState: "PROD"
