@@ -14,20 +14,12 @@ app.get('/health', (req, res) => {
     const responseStatus = process.env.STATE === 'PENDING' ? 500 : 200;
     res.status(responseStatus).send('Root route response');
 });
-function serveStaticIf200(req, res, next) {
-    const responseStatus = process.env.STATE === 'PENDING' ? 500 : 200;
-    if (responseStatus === 200) {
-        express_1.default.static(path_1.default.join(__dirname, 'public'))(req, res, next);
-    }
-    else {
-        next();
-    }
+function serveStatic(req, res, next) {
+    express_1.default.static(path_1.default.join(__dirname, 'public'))(req, res, next);
 }
-app.use(serveStaticIf200);
+app.use(serveStatic);
 app.get('/*', (req, res) => {
-    console.log("Env variable: ", process.env.STATE);
-    const responseStatus = process.env.STATE === 'PENDING' ? 500 : 200;
-    res.status(responseStatus).send('Root route response');
+    res.status(200).send('Root route response');
 });
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

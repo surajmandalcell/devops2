@@ -8,4 +8,7 @@ image:
 service:
   type: LoadBalancer
 
+deployment:
+  initialDelaySeconds: 0
+
 envState: "PROD"
