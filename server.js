@@ -8,7 +8,7 @@ const path_1 = __importDefault(require("path"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
-const port = 3000;
+const port = 80;
 function serveStaticIf200(req, res, next) {
     const responseStatus = process.env.STATE === 'PENDING' ? 500 : 200;
     if (responseStatus === 200) {

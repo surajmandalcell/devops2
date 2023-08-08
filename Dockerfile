@@ -14,6 +14,6 @@ RUN pnpm run build
 ARG STATE=PRODUCTION
 ENV STATE=${STATE}
 
-EXPOSE 3000
+EXPOSE 80
 
 CMD ["node", "server.js"]

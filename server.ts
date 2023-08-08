@@ -5,7 +5,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const port = 3000;
+const port = 80;
 
 function serveStaticIf200(req: Request, res: Response, next: NextFunction) {
   const responseStatus = process.env.STATE === 'PENDING' ? 500 : 200;
