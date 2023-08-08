@@ -6,7 +6,6 @@ image:
   pullPolicy: IfNotPresent
 
 service:
-  type: ClusterIP
-  port: 80
+  type: LoadBalancer
 
 envState: "PENDING"

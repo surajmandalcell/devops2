@@ -7,6 +7,12 @@ dotenv.config();
 const app = express();
 const port = 80;
 
+app.get('/health', (req: Request, res: Response) => {
+  console.log("Env variable: ", process.env.STATE);
+  const responseStatus = process.env.STATE === 'PENDING' ? 500 : 200;
+  res.status(responseStatus).send('Root route response');
+});
+
 function serveStaticIf200(req: Request, res: Response, next: NextFunction) {
   const responseStatus = process.env.STATE === 'PENDING' ? 500 : 200;
 
