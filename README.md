@@ -25,3 +25,9 @@ helm install release2 . --values values.PENDING.yaml
 helm upgrade release1 . --values values.PROD.yaml
 helm upgrade release2 . --values values.PENDING.yaml
 ```
+
+#### Delete helmcharts
+```
+helm uninstall release1
+helm uninstall release2
+```
