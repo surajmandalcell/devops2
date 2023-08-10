@@ -21,3 +21,9 @@ spec:
           env:
             - name: STATE
               value: {{ .Values.envState }}
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
