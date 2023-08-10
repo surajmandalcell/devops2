@@ -1,0 +1,12 @@
+SERVER=your_email@gmail.com
+mailhub=smtp.gmail.com:587
+
+AuthUser=your_email@gmail.com
+AuthPass=your_password
+UseTLS=YES
+UseSTARTTLS=YES
+
+rewriteDomain=gmail.com
+hostname=gmail.com
+
+FromLineOverride=YES
